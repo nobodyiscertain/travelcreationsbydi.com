@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Creations By Di — Creating Your Dream Vacation | Texas Hill Country Travel Agency</title>
+  <meta name="description" content="Texas Hill Country travel agency offering personalized vacation planning with one-on-one service. Disney, cruises, Universal, and more. You dream it, we create it!">
+  <meta name="keywords" content="travel agency, Texas Hill Country, Ingram TX, vacation planning, Disney vacations, cruise planning, Universal Orlando, personalized travel, travel advisor">
+  <meta property="og:title" content="Travel Creations By Di — Creating Your Dream Vacation">
+  <meta property="og:description" content="Texas Hill Country travel agency with one-on-one personal service. You dream it, we create it!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelcreationsbydi.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #00b4d8;
+      --teal-dark: #0096b7;
+      --yellow: #f4a024;
+      --yellow-light: #fdb849;
+      --white: #ffffff;
+      --light-bg: #e8f8fc;
+      --dark-text: #1a2b3c;
+      --gray-text: #4a5568;
+      --warm-white: #fefcf7;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark-text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    .script { font-family: 'Pacifico', cursive; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .nav-logo-text {
+      font-family: 'Pacifico', cursive;
+      color: var(--teal-dark);
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .nav-logo-text small {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--gray-text);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-text);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    .nav-cta {
+      background: var(--yellow) !important;
+      color: var(--white) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--yellow-light) !important;
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background: linear-gradient(135deg, var(--light-bg) 0%, var(--warm-white) 50%, #fef3e2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(244,160,36,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--teal);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      color: var(--teal-dark);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 span {
+      color: var(--yellow);
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: var(--gray-text);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: white;
+      box-shadow: 0 4px 20px rgba(244,160,36,0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--yellow-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(244,160,36,0.45);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--teal-dark);
+      border: 2px solid var(--teal);
+    }
+
+    .btn-secondary:hover {
+      background: var(--teal);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .hero-trust {
+      margin-top: 3rem;
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--gray-text);
+    }
+
+    .trust-item .icon {
+      font-size: 1.2rem;
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--gray-text);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* WHY USE AN ADVISOR */
+    .why-section {
+      background: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .why-card {
+      background: var(--light-bg);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,180,216,0.12);
+    }
+
+    .why-card .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .why-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--dark-text);
+    }
+
+    .why-card p {
+      font-size: 0.9rem;
+      color: var(--gray-text);
+      line-height: 1.7;
+    }
+
+    /* DESTINATIONS */
+    .destinations-section {
+      background: var(--warm-white);
+    }
+
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .dest-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 280px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .dest-card:hover { transform: scale(1.02); }
+
+    .dest-card-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .dest-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      padding: 2rem 1.5rem 1.5rem;
+      color: white;
+    }
+
+    .dest-card-overlay h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .dest-card-overlay p {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    .dest-card.featured {
+      grid-column: span 2;
+      height: 320px;
+    }
+
+    /* Destination images as backgrounds */
+    .dest-disney, .dest-cruise, .dest-universal, .dest-beach { background-size: cover; background-position: center; }
+    .dest-beach { background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80'); }
+    .dest-disney { background-image: url('https://images.unsplash.com/photo-1637511077877-3c6a00eb32ba?w=800&q=80'); }
+    .dest-cruise { background-image: url('https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80'); }
+    .dest-universal { background-image: url('https://images.unsplash.com/photo-1625805460217-f026906358db?w=800&q=80'); }
+
+    /* ABOUT */
+    .about-section {
+      background: var(--white);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80') center/cover no-repeat;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      background: var(--yellow);
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+
+    .about-content h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2rem;
+      color: var(--teal-dark);
+      margin-bottom: 1rem;
+    }
+
+    .about-content p {
+      color: var(--gray-text);
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+    }
+
+    .about-content .highlight {
+      display: inline-block;
+      background: var(--light-bg);
+      border-left: 3px solid var(--teal);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--teal-dark);
+      margin: 1rem 0;
+    }
+
+    /* REVIEWS */
+    .reviews-section {
+      background: var(--light-bg);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .review-stars {
+      color: var(--yellow);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .review-card p {
+      font-size: 0.9rem;
+      color: var(--gray-text);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--dark-text);
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+      text-align: center;
+      color: white;
+      padding: 5rem 2rem;
+    }
+
+    .cta-section h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+    }
+
+    .cta-section .btn-primary {
+      background: var(--yellow);
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: var(--white);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--dark-text);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--light-bg);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text {
+      font-size: 0.95rem;
+      color: var(--gray-text);
+    }
+
+    .contact-item-text strong {
+      display: block;
+      color: var(--dark-text);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-item-text a {
+      color: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    .contact-item-text a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-social {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      width: 44px;
+      height: 44px;
+      background: var(--teal);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .social-link:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 0.85rem 1.15rem;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+      background: var(--warm-white);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      outline: none;
+      border-color: var(--teal);
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form .btn-primary {
+      align-self: flex-start;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-text);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    footer .footer-logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3rem;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.4rem; }
+      .why-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .dest-grid { grid-template-columns: 1fr; }
+      .dest-card.featured { grid-column: span 1; }
+      .about-layout, .contact-layout { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">🌴</div>
+      <div class="nav-logo-text">
+        Travel Creations
+        <small>by Di</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact" class="nav-cta">Let's Plan ✈️</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Texas Hill Country Travel Agency</div>
+      <h1>Where to <span>Next?</span></h1>
+      <p class="hero-tagline">Personalized vacation planning with one-on-one service.<br>You dream it — we create it.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Start Planning Your Trip</a>
+        <a href="#about" class="btn btn-secondary">Why Use an Advisor?</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="icon">🎯</span> Personalized Itineraries</div>
+        <div class="trust-item"><span class="icon">🤝</span> One-on-One Service</div>
+        <div class="trust-item"><span class="icon">💰</span> Budget-Friendly Options</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY USE A TRAVEL ADVISOR -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Use a Travel Advisor?</h2>
+        <p>You could book it yourself — but why would you, when someone can do it better?</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="card-icon">🎨</div>
+          <h3>Personalized Planning</h3>
+          <p>Every trip is custom-built around your interests, budget, and travel style. No cookie-cutter packages — just your dream vacation, designed for you.</p>
+        </div>
+        <div class="why-card">
+          <div class="card-icon">🧭</div>
+          <h3>Your Travel Partner</h3>
+          <p>From the first call to your return flight, we're with you every step. We handle the research, bookings, and logistics so you can focus on the fun.</p>
+        </div>
+        <div class="why-card">
+          <div class="card-icon">📞</div>
+          <h3>Personal Point of Contact</h3>
+          <p>Questions at midnight before your trip? Concerns while traveling? We're a call or text away — always. Real support from a real person.</p>
+        </div>
+        <div class="why-card">
+          <div class="card-icon">🔍</div>
+          <h3>Insider Access</h3>
+          <p>We work with trusted suppliers to find deals, upgrades, and experiences you won't find on a booking site. Perks that come with partnership.</p>
+        </div>
+        <div class="why-card">
+          <div class="card-icon">✨</div>
+          <h3>Stress-Free Options</h3>
+          <p>We present the best options for you to review, then tweak and refine until every detail is perfect. Your only job is to get excited.</p>
+        </div>
+        <div class="why-card">
+          <div class="card-icon">🛡️</div>
+          <h3>Peace of Mind</h3>
+          <p>Flight canceled? Resort overbooked? We handle it. Having an advocate in your corner makes all the difference when things go sideways.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations-section" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <h2>Popular Destinations</h2>
+        <p>From theme parks to tropical beaches — we've got your next adventure covered</p>
+      </div>
+      <div class="dest-grid">
+        <div class="dest-card featured dest-beach">
+          <div class="dest-card-overlay">
+            <h3>🏖️ Beach & Resort Getaways</h3>
+            <p>Caribbean, Mexico, Hawaii & beyond</p>
+          </div>
+        </div>
+        <div class="dest-card dest-disney">
+          <div class="dest-card-overlay">
+            <h3>🏰 Disney Vacations</h3>
+            <p>Walt Disney World, Disneyland & Disney Cruise Line</p>
+          </div>
+        </div>
+        <div class="dest-card dest-cruise">
+          <div class="dest-card-overlay">
+            <h3>🚢 Cruises</h3>
+            <p>Royal Caribbean, Norwegian, Carnival & more</p>
+          </div>
+        </div>
+        <div class="dest-card dest-universal">
+          <div class="dest-card-overlay">
+            <h3>🎢 Universal Destinations</h3>
+            <p>Universal Orlando, Islands of Adventure & Epic Universe</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-image"></div>
+        <div class="about-content">
+          <h2>Meet Di</h2>
+          <p>Based in the beautiful Texas Hill Country, I started Travel Creations to help families and couples create unforgettable vacation memories — without the stress of planning it all yourself.</p>
+          <div class="highlight">"I believe every trip should feel like it was made just for you — because with me, it is."</div>
+          <p>Whether it's your first Disney trip with the kids, a romantic cruise, or an adventure to somewhere new — I bring the same passion and personal attention to every single itinerary. Your dream vacation is my favorite thing to build.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 0.5rem;">Let's Chat About Your Trip</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Travelers Say</h2>
+        <p>Don't just take our word for it</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Di made our family Disney trip absolutely magical. She thought of details we never would have — dining reservations, FastPass strategy, even rest breaks for the kids. Couldn't have done it without her!"</p>
+          <div class="review-author">— The Martinez Family</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Our anniversary cruise was perfection. Di found us an upgraded cabin at a better price than what we'd found online. The personal touch made all the difference."</p>
+          <div class="review-author">— Sarah & Mike</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p>"I was overwhelmed trying to plan a big group trip. Di took it off my plate completely and delivered something everyone loved. Already planning our next one with her!"</p>
+          <div class="review-author">— Jennifer R.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>You Dream It . . . We Create It!</h2>
+    <p>Ready to start planning your next adventure? Let's make it happen together.</p>
+    <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Let's Plan Your Trip</h2>
+        <p>Tell us where you want to go and we'll take it from there</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Location</strong>
+              110 Hideaway Circle, Ingram, TX 78025
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <a href="mailto:dmack@lamacchiaje.com">dmack@lamacchiaje.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-item-text">
+              <strong>Phone</strong>
+              <a href="tel:4692486318">(469) 248-6318</a>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/yourtravelcreator" class="social-link" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/yourtravelcreator/" class="social-link" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+          </div>
+          <input type="tel" placeholder="Phone Number">
+          <select>
+            <option value="">Where do you want to go?</option>
+            <option>Disney (Walt Disney World / Disneyland)</option>
+            <option>Cruise</option>
+            <option>Universal Destinations</option>
+            <option>Beach / Resort</option>
+            <option>International Travel</option>
+            <option>Not sure yet — help me decide!</option>
+          </select>
+          <textarea placeholder="Tell us about your dream vacation — dates, group size, budget, must-haves..."></textarea>
+          <button type="submit" class="btn btn-primary">Send My Trip Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Travel Creations by Di</div>
+    <p>Texas Hill Country Travel Agency · Ingram, TX<br>
+    &copy; 2025 Travel Creations By Di. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
