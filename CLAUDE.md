@@ -14,6 +14,10 @@ Static website for Travel Creations by Di — a Texas Hill Country travel agency
 - Forms submit via [FormSubmit.co](https://formsubmit.co) to `dmack@lamacchiajs.com`
 - Mobile hamburger menu uses CSS-only checkbox hack (no JS)
 
+## Git Workflow
+
+Committing directly to `main` is fine for this repo.
+
 ## Development
 
 No build step. Open any `.html` file directly in a browser, or use a local server:

@@ -443,16 +443,32 @@ section { padding: 5rem 2rem; }
   opacity: 0.85;
 }
 
-.dest-card.featured {
-  grid-column: span 2;
-  height: 320px;
+.dest-disney, .dest-ocean, .dest-river, .dest-sipsail { background-size: cover; background-position: center; }
+.dest-disney { background-image: url('https://images.unsplash.com/photo-1637511077877-3c6a00eb32ba?w=800&q=80'); }
+.dest-ocean { background-image: url('https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80'); }
+.dest-river { background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'); }
+.dest-sipsail { background-image: url('https://images.unsplash.com/photo-1545579133-99bb5ab189bd?w=800&q=80'); }
+
+.dest-card-overlay .dest-hook {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  margin-bottom: 0.25rem;
 }
 
-.dest-disney, .dest-cruise, .dest-universal, .dest-beach { background-size: cover; background-position: center; }
-.dest-beach { background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80'); }
-.dest-disney { background-image: url('https://images.unsplash.com/photo-1637511077877-3c6a00eb32ba?w=800&q=80'); }
-.dest-cruise { background-image: url('https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80'); }
-.dest-universal { background-image: url('https://images.unsplash.com/photo-1625805460217-f026906358db?w=800&q=80'); }
+.dest-card-overlay .dest-cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--yellow);
+  transition: color 0.2s;
+}
+
+.dest-card:hover .dest-cta {
+  color: var(--yellow-light);
+}
 
 /* ===========================
    ABOUT (homepage section)
@@ -1295,6 +1311,149 @@ footer .footer-links a:hover {
 }
 
 /* ===========================
+   SIP & SAIL PAGE
+   =========================== */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.collection-card {
+  background: var(--light-bg);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.collection-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-4px);
+}
+
+.collection-card .card-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.collection-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 0.75rem;
+}
+
+.collection-card p {
+  font-size: 0.9rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+
+/* ===========================
+   FEATURED OFFERS (Disney, Universal, Cruising)
+   =========================== */
+.featured-offer {
+  background: linear-gradient(135deg, #e8f8fc 0%, #fef3e2 100%);
+  border: 2px solid var(--teal);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-offer h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  margin-bottom: 0.5rem;
+}
+
+.featured-offer p {
+  font-size: 0.9rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.featured-offer .offer-tag {
+  display: inline-block;
+  background: var(--yellow);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+/* Inventory grid for cruising page */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.inventory-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 2px solid var(--light-bg);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.inventory-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-4px);
+}
+
+.inventory-card .card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.inventory-card .card-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.inventory-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 0.5rem;
+}
+
+.inventory-card p {
+  font-size: 0.9rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.inventory-card .status-tag {
+  display: inline-block;
+  background: var(--light-bg);
+  color: var(--teal-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  margin-top: 0.75rem;
+}
+
+/* ===========================
    RESPONSIVE
    =========================== */
 @media (max-width: 768px) {
@@ -1338,7 +1497,6 @@ footer .footer-links a:hover {
   .page-hero h1 { font-size: 2.2rem; }
   .why-grid, .reviews-grid { grid-template-columns: 1fr; }
   .dest-grid { grid-template-columns: 1fr; }
-  .dest-card.featured { grid-column: span 1; }
   .about-layout, .contact-layout { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .bio-layout { grid-template-columns: 1fr; text-align: center; }
@@ -1350,4 +1508,6 @@ footer .footer-links a:hover {
   .photo-grid { grid-template-columns: repeat(2, 1fr); }
   .stories-grid { grid-template-columns: 1fr; }
   .action-cards { grid-template-columns: 1fr; }
+  .collection-grid { grid-template-columns: 1fr; }
+  .inventory-grid { grid-template-columns: 1fr; }
 }
