@@ -10,7 +10,7 @@ Static website for Travel Creations by Di — a Texas Hill Country travel agency
 
 - Pure HTML + CSS, no build tools, no JavaScript frameworks
 - Single shared `styles.css` linked from all pages
-- Google Fonts: Pacifico (headings/script) + Poppins (body text)
+- Google Fonts: Cormorant Garamond (headings) + Pinyon Script (script accents) + Raleway (body text)
 - Forms submit via [FormSubmit.co](https://formsubmit.co) to `dmack@lamacchiajs.com`
 - Mobile hamburger menu uses CSS-only checkbox hack (no JS)
 
@@ -32,12 +32,14 @@ All pages follow the design established in `index.html`. CSS variables defined i
 
 | Variable | Value | Usage |
 |---|---|---|
-| `--teal` | `#00b4d8` | Primary accent |
-| `--teal-dark` | `#0096b7` | Headings, links |
-| `--yellow` | `#f4a024` | CTAs, buttons |
-| `--light-bg` | `#e8f8fc` | Card backgrounds |
-| `--dark-text` | `#1a2b3c` | Body text |
-| `--warm-white` | `#fefcf7` | Alternate section bg |
+| `--gold` | `#C4A265` | Primary accent (from logo) |
+| `--gold-light` | `#D4B87A` | Hover states, script text |
+| `--gold-dark` | `#A8894F` | Darker gold variant |
+| `--charcoal` | `#4A5259` | Headings, nav text |
+| `--charcoal-dark` | `#2C3338` | Footer bg, body text |
+| `--cream` | `#FAF8F5` | Section backgrounds |
+| `--ivory` | `#F0EBE3` | Card backgrounds |
+| `--border` | `#E8E2D9` | Subtle borders |
 
 ## Architecture
 

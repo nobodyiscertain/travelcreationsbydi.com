@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Pinyon+Script&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,11 +19,12 @@
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">🌴</div>
       <div class="nav-logo-text">Travel Creations<small>by Di</small></div>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label">☰</label>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span><span></span><span></span>
+    </label>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="disney.html">Disney</a></li>
@@ -33,7 +34,7 @@
       <li><a href="reviews.html" class="active">Reviews</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html" class="nav-cta">Let's Plan ✈️</a></li>
+      <li><a href="contact.html" class="nav-cta">Let's Plan</a></li>
     </ul>
   </nav>
 
@@ -70,37 +71,37 @@
       <div class="reviews-grid">
 
         <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>"Di made our family Disney trip absolutely magical. She thought of details we never would have — dining reservations, FastPass strategy, even rest breaks for the kids. Couldn't have done it without her!"</p>
           <div class="review-author">— The Martinez Family</div>
         </div>
 
         <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>"Our anniversary cruise was perfection. Di found us an upgraded cabin at a better price than what we'd found online. The personal touch made all the difference."</p>
           <div class="review-author">— Sarah &amp; Mike</div>
         </div>
 
         <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>"I was overwhelmed trying to plan a big group trip. Di took it off my plate completely and delivered something everyone loved. Already planning our next one with her!"</p>
           <div class="review-author">— Jennifer R.</div>
         </div>
 
         <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>"Di planned the most incredible honeymoon for us — every detail was perfect, from the beachfront suite to the surprise dinner on the water. She turned our dream into reality."</p>
           <div class="review-author">— Amanda &amp; Josh</div>
         </div>
 
         <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>"As a solo traveler, I was nervous about planning my first big international trip. Di made me feel confident and taken care of every step of the way. Can't wait for the next adventure!"</p>
           <div class="review-author">— Kristin M.</div>
         </div>
 
         <div class="review-card">
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>"We've used Di for three family vacations now and every single one has been better than the last. She remembers our preferences and always surprises us with thoughtful touches."</p>
           <div class="review-author">— The Thompson Family</div>
         </div>
@@ -111,18 +112,36 @@
 
   <!-- CTA -->
   <section class="cta-section">
-    <h2>Ready to Plan Your Dream Vacation?</h2>
-    <p>Join our growing family of happy travelers. Let's create your next unforgettable adventure together.</p>
-    <a href="contact.html" class="btn btn-primary">Start Planning Today</a>
+    <div class="cta-content">
+      <h2>Ready to Plan Your Dream Vacation?</h2>
+      <p>Join our growing family of happy travelers. Let's create your next unforgettable adventure together.</p>
+      <a href="contact.html" class="btn btn-white">Start Planning Today</a>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Travel Creations by Di</div>
-    <div class="footer-links">
-      <a href="about.html">About</a><a href="disney.html">Disney</a><a href="cruising.html">Cruises</a><a href="universal.html">Universal</a><a href="sip-and-sail.html">Sip &amp; Sail</a><a href="reviews.html">Reviews</a><a href="blog.html">Blog</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Travel Creations <span class="script">by Di</span></div>
+        <div class="footer-tagline">Curator of Travel &middot; Est. 2019</div>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="disney.html">Disney</a>
+        <a href="cruising.html">Cruises</a>
+        <a href="universal.html">Universal</a>
+        <a href="sip-and-sail.html">Sip &amp; Sail</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Texas Hill Country Travel Agency &middot; Ingram, TX</p>
+        <p>&copy; 2026 Travel Creations By Di. All rights reserved.</p>
+      </div>
     </div>
-    <p>Texas Hill Country Travel Agency · Ingram, TX<br>&copy; 2026 Travel Creations By Di. All rights reserved.</p>
   </footer>
 
 </body>
