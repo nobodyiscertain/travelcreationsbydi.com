@@ -10,7 +10,7 @@ Static website for Travel Creations by Di — a Texas Hill Country travel agency
 
 - Pure HTML + CSS, no build tools, no JavaScript frameworks
 - Single shared `styles.css` linked from all pages
-- Google Fonts: Cormorant Garamond (headings) + Pinyon Script (script accents) + Raleway (body text)
+- Google Fonts: Playfair Display (headings) + Pinyon Script (script accents) + Montserrat (body text)
 - Forms submit via [FormSubmit.co](https://formsubmit.co) to `dmack@lamacchiajs.com`
 - Mobile hamburger menu uses CSS-only checkbox hack (no JS)
 
@@ -32,9 +32,9 @@ All pages follow the design established in `index.html`. CSS variables defined i
 
 | Variable | Value | Usage |
 |---|---|---|
-| `--gold` | `#C4A265` | Primary accent (from logo) |
-| `--gold-light` | `#D4B87A` | Hover states, script text |
-| `--gold-dark` | `#A8894F` | Darker gold variant |
+| `--gold` | `#C5A059` | Primary accent (from logo) |
+| `--gold-light` | `#D4B472` | Hover states, script text |
+| `--gold-dark` | `#A88740` | Darker gold variant |
 | `--charcoal` | `#4A5259` | Headings, nav text |
 | `--charcoal-dark` | `#2C3338` | Footer bg, body text |
 | `--cream` | `#FAF8F5` | Section backgrounds |
@@ -58,4 +58,5 @@ All pages follow the design established in `index.html`. CSS variables defined i
 - Contact info: 110 Hideaway Circle, Ingram TX 78025 / dmack@lamacchiajs.com / (469) 248-6318
 - Social: [Facebook](https://www.facebook.com/yourtravelcreator) / [Instagram](https://www.instagram.com/yourtravelcreator/)
 - Form hidden fields: `_subject` = "New Trip Request from Website", `_next` = full URL to `thank-you.html`
-- Images: Unsplash URLs used directly (no local image assets)
+- Logo: `logo.png` in project root (extracted from official SVG, used in nav/hero/footer)
+- Images: Unsplash URLs used directly (no local image assets except logo)

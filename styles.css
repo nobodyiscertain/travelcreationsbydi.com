@@ -4,9 +4,9 @@
    =========================== */
 
 :root {
-  --gold: #C4A265;
-  --gold-light: #D4B87A;
-  --gold-dark: #A8894F;
+  --gold: #C5A059;
+  --gold-light: #D4B472;
+  --gold-dark: #A88740;
   --charcoal: #4A5259;
   --charcoal-dark: #2C3338;
   --cream: #FAF8F5;
@@ -21,7 +21,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--dark-text);
   line-height: 1.7;
   background: var(--white);
@@ -57,22 +57,10 @@ nav {
   text-decoration: none;
 }
 
-.nav-logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--charcoal);
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-}
-
-.nav-logo-text small {
+.nav-logo img {
+  height: 52px;
+  width: auto;
   display: block;
-  font-family: 'Pinyon Script', cursive;
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--gold);
-  letter-spacing: 0;
 }
 
 /* Hamburger menu (CSS-only) */
@@ -184,21 +172,13 @@ nav {
   margin-bottom: 2rem;
 }
 
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.5rem;
-  color: var(--white);
-  line-height: 1.15;
-  margin-bottom: 0.25rem;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-}
-
-.hero h1 .script {
-  font-size: 3rem;
-  color: var(--gold-light);
+.hero-logo {
+  max-width: 380px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 0.25rem;
   display: block;
-  margin-top: 0.25rem;
+  filter: brightness(0) invert(1);
 }
 
 .hero-divider {
@@ -249,7 +229,7 @@ nav {
 }
 
 .page-hero h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   color: var(--charcoal);
   margin-bottom: 0.75rem;
@@ -281,7 +261,7 @@ nav {
   transition: all 0.3s;
   cursor: pointer;
   border: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -359,7 +339,7 @@ section { padding: 6rem 2rem; }
 }
 
 .section-header h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: var(--charcoal);
   margin-bottom: 0.75rem;
@@ -400,16 +380,28 @@ section { padding: 6rem 2rem; }
   background: var(--cream);
 }
 
-.why-card .card-number {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
+.why-card .card-icon {
   color: var(--gold);
-  font-weight: 300;
   margin-bottom: 1rem;
 }
 
+.why-card .card-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.bridge-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-top: 1rem;
+}
+
 .why-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -468,7 +460,7 @@ section { padding: 6rem 2rem; }
 }
 
 .dest-card-overlay h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
@@ -540,7 +532,7 @@ section { padding: 6rem 2rem; }
 }
 
 .about-content h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: var(--charcoal);
   margin-bottom: 1.25rem;
@@ -558,7 +550,7 @@ section { padding: 6rem 2rem; }
   display: block;
   border-left: 2px solid var(--gold);
   padding: 1.25rem 1.5rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.15rem;
   color: var(--charcoal);
@@ -603,7 +595,7 @@ section { padding: 6rem 2rem; }
 }
 
 .review-author {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--charcoal);
@@ -638,7 +630,7 @@ section { padding: 6rem 2rem; }
 }
 
 .cta-section h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: 300;
@@ -674,7 +666,7 @@ section { padding: 6rem 2rem; }
 }
 
 .contact-info h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 2rem;
@@ -767,7 +759,7 @@ section { padding: 6rem 2rem; }
   width: 100%;
   padding: 0.9rem 1.15rem;
   border: 1px solid var(--border);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.88rem;
   transition: border-color 0.3s;
   background: var(--white);
@@ -819,17 +811,12 @@ footer {
   margin-bottom: 2rem;
 }
 
-footer .footer-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  color: var(--white);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-footer .footer-logo .script {
-  color: var(--gold-light);
-  font-size: 1.3rem;
+footer .footer-logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer-tagline {
@@ -894,7 +881,7 @@ footer a {
 }
 
 .bio-content h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   color: var(--charcoal);
   margin-bottom: 0.5rem;
@@ -971,7 +958,7 @@ footer a {
 }
 
 .promo-banner h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -1010,7 +997,7 @@ footer a {
 }
 
 .dining-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1046,7 +1033,7 @@ footer a {
 }
 
 .article-content h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   color: var(--charcoal);
   margin: 2.5rem 0 1rem;
@@ -1054,7 +1041,7 @@ footer a {
 }
 
 .article-content h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1098,7 +1085,7 @@ footer a {
 }
 
 .promo-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1175,7 +1162,7 @@ footer a {
 }
 
 .blog-card-body h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1227,7 +1214,7 @@ footer a {
 }
 
 .blog-post-content h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1235,7 +1222,7 @@ footer a {
 }
 
 .blog-post-content h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1258,7 +1245,7 @@ footer a {
   border-left: 2px solid var(--gold);
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.1rem;
   color: var(--charcoal);
@@ -1330,7 +1317,7 @@ footer a {
 }
 
 .story-card-body h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1372,7 +1359,7 @@ footer a {
 }
 
 .action-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -1406,7 +1393,7 @@ footer a {
 }
 
 .thankyou-content h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
   color: var(--charcoal);
   margin-bottom: 1rem;
@@ -1453,7 +1440,7 @@ footer a {
 }
 
 .collection-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1479,7 +1466,7 @@ footer a {
 }
 
 .featured-offer h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1540,7 +1527,7 @@ footer a {
 }
 
 .inventory-card h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -1609,8 +1596,9 @@ footer a {
     display: flex;
   }
 
-  .hero h1 { font-size: 3rem; }
-  .hero h1 .script { font-size: 2rem; }
+  .nav-logo img { height: 42px; }
+  .hero-logo { max-width: 260px; }
+  footer .footer-logo img { height: 60px; }
   .page-hero h1 { font-size: 2.2rem; }
   .section-header h2 { font-size: 2rem; }
 

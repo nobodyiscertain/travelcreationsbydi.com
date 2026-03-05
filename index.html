@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://travelcreationsbydi.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Pinyon+Script&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,10 +20,7 @@
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-text">
-        Travel Creations
-        <small>by Di</small>
-      </div>
+      <img src="logo.png" alt="Travel Creations by Di">
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="nav-toggle-label">
@@ -48,7 +45,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge">Curator of Travel &middot; Est. 2019</div>
-      <h1>Travel Creations<br><span class="script">by Di</span></h1>
+      <img src="logo.png" alt="Travel Creations by Di" class="hero-logo">
       <div class="hero-divider"></div>
       <p class="hero-tagline">Elevated escapes for families, couples &amp; social explorers.<br>From Disney magic to European river cruises — curated with care.</p>
       <div class="hero-buttons">
@@ -62,40 +59,52 @@
   <section class="why-section" id="why">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">The Difference</div>
         <h2>Why Use a Travel Advisor?</h2>
         <p>You could book it yourself — but why would you, when someone can do it better?</p>
+        <div class="bridge-heading">The Difference</div>
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <div class="card-number">01</div>
-          <h3>Personalized Planning</h3>
-          <p>Every trip is custom-built around your interests, timeline, and travel style. No cookie-cutter packages — just your dream vacation, designed for you.</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="14"/><path d="M18 4v14l10 6"/><path d="M18 18l-8 10"/><path d="M12 8l6 10 6-10"/></svg>
+          </div>
+          <h3>Bespoke Itinerary Design</h3>
+          <p>We don't do 'packages.' Every journey is a blank canvas, custom-tailored to your specific pace, preferences, and travel style.</p>
         </div>
         <div class="why-card">
-          <div class="card-number">02</div>
-          <h3>Your Travel Partner</h3>
-          <p>From the first call to your return flight, we're with you every step. We handle the research, bookings, and logistics so you can focus on the fun.</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="11" r="7"/><path d="M6 32c0-6.627 5.373-12 12-12s12 5.373 12 12"/><path d="M26 8l4-4m0 0h-4m4 0v4"/></svg>
+          </div>
+          <h3>Your Dedicated Advocate</h3>
+          <p>From the initial spark of an idea until you're back home, I am your singular point of contact. I manage the logistics so you can remain the traveler.</p>
         </div>
         <div class="why-card">
-          <div class="card-number">03</div>
-          <h3>Personal Point of Contact</h3>
-          <p>Questions at midnight before your trip? Concerns while traveling? We're a call or text away — always. Real support from a real person.</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="15" r="11"/><path d="M24 24l8 8"/><path d="M11 12h8m-4-4v8"/></svg>
+          </div>
+          <h3>Precision &amp; Expertise</h3>
+          <p>With a background in professional precision, I bring a meticulous eye to every detail. I manage the fine print so you don't have to.</p>
         </div>
         <div class="why-card">
-          <div class="card-number">04</div>
-          <h3>Insider Access</h3>
-          <p>We work with trusted suppliers to find deals, upgrades, and experiences you won't find on a booking site. Perks that come with partnership.</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="14"/><path d="M4 18h28M18 4c-4.418 5.12-4.418 22.88 0 28M18 4c4.418 5.12 4.418 22.88 0 28"/><path d="M22 10l4 2-2 4"/></svg>
+          </div>
+          <h3>Exclusive Global Access</h3>
+          <p>Through elite supplier partnerships, we unlock 'un-Googleable' perks — room upgrades, private tours, and curated amenities.</p>
         </div>
         <div class="why-card">
-          <div class="card-number">05</div>
-          <h3>Stress-Free Options</h3>
-          <p>We present the best options for you to review, then tweak and refine until every detail is perfect. Your only job is to get excited.</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l2.5 8h8l-6.5 5 2.5 8L18 18l-6.5 5 2.5-8-6.5-5h8z"/><circle cx="18" cy="18" r="4"/></svg>
+          </div>
+          <h3>Seamless Refinement</h3>
+          <p>We present only the most exceptional options, then collaborate to polish the details until the itinerary is a perfect reflection of your vision.</p>
         </div>
         <div class="why-card">
-          <div class="card-number">06</div>
-          <h3>Peace of Mind</h3>
-          <p>Flight canceled? Resort overbooked? We handle it. Having an advocate in your corner makes all the difference when things go sideways.</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4L6 12v10c0 7 12 12 12 12s12-5 12-12V12L18 4z"/><path d="M13 18l3 3 7-7"/></svg>
+          </div>
+          <h3>Unrivaled Peace of Mind</h3>
+          <p>We are your safety net. Should a flight change or a detail shift, we handle the resolution behind the scenes while you enjoy the destination.</p>
         </div>
       </div>
     </div>
@@ -154,9 +163,9 @@
         <div class="about-content">
           <div class="section-label">Your Curator</div>
           <h2>Meet Di</h2>
-          <p>With over 30 years as a professional bookkeeper, I bring a level of precision to travel planning that most advisors simply can't match. Every dollar of your travel investment is managed with meticulous accuracy.</p>
-          <div class="highlight">"I take care of the spreadsheets and the logistics, so you can focus on the memories."</div>
-          <p>From the Texas Hill Country to the Rhine River, I specialize in Elevated Escapes — curated vacations for families, couples, and social explorers who value attention to detail and seamless experiences.</p>
+          <p>With over 30 years of professional precision as a bookkeeper and business owner, I bring a level of logistical mastery to travel planning that is rare in the industry. I master the complex choreography of travel, so you can simply enjoy the performance.</p>
+          <div class="highlight">"I master the complex choreography of travel, so you can simply enjoy the performance."</div>
+          <p>Based in the Texas Hill Country, I combine a passion for discovery with a signature 'no-stone-unturned' approach. Your investment deserves an advisor who values accuracy as much as adventure.</p>
           <a href="about.html" class="btn btn-primary" style="margin-top: 0.5rem;">Learn More About Di</a>
         </div>
       </div>
@@ -280,7 +289,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">Travel Creations <span class="script">by Di</span></div>
+        <div class="footer-logo"><img src="logo.png" alt="Travel Creations by Di"></div>
         <div class="footer-tagline">Curator of Travel &middot; Est. 2019</div>
       </div>
       <div class="footer-links">
