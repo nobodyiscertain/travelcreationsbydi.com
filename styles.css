@@ -291,36 +291,15 @@ nav {
 }
 
 .page-hero-hc {
-  background: linear-gradient(135deg, #3d4f2f 0%, #5a6e42 40%, #4a5c36 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50vh;
-  padding: 6rem 2rem;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  line-height: 0;
 }
 
-.page-hero-hc::before {
-  background: none;
-}
-
-.hero-badge {
-  max-width: 380px;
-  width: 60%;
+.hero-cover-img {
+  width: 100%;
   height: auto;
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  display: block;
 }
 
 /* ===========================
