@@ -266,8 +266,8 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--charcoal-dark);
-  min-height: 420px;
-  padding: 12rem 2rem 5rem;
+  min-height: 60vh;
+  padding: 14rem 2rem 6rem;
 }
 
 .page-hero-image::before {
@@ -1682,8 +1682,8 @@ footer a {
 
   .page-hero { padding: 8rem 1.5rem 3rem; }
   .page-hero-image {
-    min-height: 300px;
-    padding: 8rem 1.5rem 3rem;
+    min-height: 45vh;
+    padding: 10rem 1.5rem 4rem;
   }
 
   .about-image { height: 280px; }
