@@ -290,6 +290,12 @@ nav {
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
+.page-hero-branded {
+  background-size: contain;
+  background-position: center center;
+  background-color: #5a6e42;
+}
+
 .page-hero-branded h1,
 .page-hero-branded p {
   opacity: 0;
@@ -297,7 +303,7 @@ nav {
 }
 
 .page-hero-branded::before {
-  background: rgba(0,0,0,0.2);
+  background: none;
 }
 
 /* ===========================
