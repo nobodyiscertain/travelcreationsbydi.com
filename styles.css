@@ -290,25 +290,37 @@ nav {
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
-.page-hero-branded {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #5a6e42;
-  min-height: 0;
-  height: 0;
-  padding: 0;
-  padding-bottom: 38%;
+.page-hero-hc {
+  background: linear-gradient(135deg, #3d4f2f 0%, #5a6e42 40%, #4a5c36 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 6rem 2rem;
 }
 
-.page-hero-branded h1,
-.page-hero-branded p {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.page-hero-branded::before {
+.page-hero-hc::before {
   background: none;
+}
+
+.hero-badge {
+  max-width: 380px;
+  width: 60%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 /* ===========================
