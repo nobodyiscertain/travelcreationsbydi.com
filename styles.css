@@ -291,8 +291,9 @@ nav {
 }
 
 .page-hero-branded {
-  background-size: contain;
+  background-size: 100% auto;
   background-position: center center;
+  background-repeat: no-repeat;
   background-color: #5a6e42;
 }
 
