@@ -564,6 +564,77 @@ section { padding: 6rem 2rem; }
 }
 
 /* ===========================
+   SIGNATURE COLLECTION (Hill Country)
+   =========================== */
+.sig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sig-card {
+  background: var(--white);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sig-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.sig-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.sig-card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.sig-card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.4rem;
+}
+
+.sig-card-ideal {
+  font-style: italic;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--gold-dark);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.sig-card-body p {
+  font-size: 0.88rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.sig-card-body .btn {
+  font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .sig-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .sig-grid { grid-template-columns: 1fr; }
+  .sig-card-img { height: 200px; }
+}
+
+/* ===========================
    ABOUT (homepage section)
    =========================== */
 .about-section {
