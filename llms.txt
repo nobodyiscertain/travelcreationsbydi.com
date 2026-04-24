@@ -14,6 +14,15 @@ Travel Creations By Di is a boutique travel agency owned by Diane Mack, a Senior
 - Tropical & Island Escapes (Hawaii, Caribbean, Mexico)
 - Custom Curated Journeys
 
+## Hill Country Insider — Signature Collection Properties
+The /gallery page showcases each property in the Signature Collection with a dedicated section:
+- Carter Creek Winery Resort & Spa — wine, brews, and spa
+- The Albert Hotel — sophisticated socialites, historic Fredericksburg
+- The Onera Collection — boutique architectural nature stays
+- Hoffman Haus — historic Fredericksburg charm, upscale B&B
+- Walnut Canyon Cabins — Hill Country seclusion, panoramic views
+- Whitetail Court Hotel — restored motor court, boutique sophistication
+
 ## Contact
 - Email: diane@travelcreationsbydi.com
 - Phone: (469) 248-6318
