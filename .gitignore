@@ -1,0 +1,7 @@
+# Raw video source clips (downloaded from Pexels, not needed in repo)
+assets/video/source/
+assets/video/trimmed/
+
+# OS
+.DS_Store
+Thumbs.db
