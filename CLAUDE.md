@@ -11,7 +11,7 @@ Static website for Travel Creations by Di — a Texas Hill Country travel agency
 - Pure HTML + CSS, no build tools, no JavaScript frameworks
 - Single shared `styles.css` linked from all pages
 - Google Fonts: Playfair Display (headings) + Pinyon Script (script accents) + Montserrat (body text)
-- Forms submit via [FormSubmit.co](https://formsubmit.co) to `dmack@lamacchiajs.com`
+- Forms submit via [FormSubmit.co](https://formsubmit.co) to `diane@travelcreationsbydi.com`
 - Mobile hamburger menu uses CSS-only checkbox hack (no JS)
 
 ## Git Workflow
@@ -55,7 +55,7 @@ All pages follow the design established in `index.html`. CSS variables defined i
 
 ## Key Details
 
-- Contact info: 110 Hideaway Circle, Ingram TX 78025 / dmack@lamacchiajs.com / (469) 248-6318
+- Contact info: 110 Hideaway Circle, Ingram TX 78025 / diane@travelcreationsbydi.com / (469) 248-6318
 - Social: [Facebook](https://www.facebook.com/yourtravelcreator) / [Instagram](https://www.instagram.com/yourtravelcreator/)
 - Form hidden fields: `_subject` = "New Trip Request from Website", `_next` = full URL to `thank-you.html`
 - Logo: `logo.png` in project root (extracted from official SVG, used in nav/hero/footer)
