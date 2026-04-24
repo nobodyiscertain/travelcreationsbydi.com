@@ -1,6 +1,8 @@
-# Raw video source clips (downloaded from Pexels, not needed in repo)
+# Raw video source clips (downloaded from stock sources, not needed in repo)
 assets/video/source/
 assets/video/trimmed/
+assets/video/hc-insider/source/
+assets/video/hc-insider/trimmed/
 
 # OS
 .DS_Store
