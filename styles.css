@@ -413,6 +413,123 @@ nav {
 }
 
 /* ===========================
+   DISNEY — 6-slide carousel hero
+   =========================== */
+.disney-hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--charcoal-dark);
+}
+
+.disney-hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.disney-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  animation: disney-carousel-fade 30s infinite;
+  pointer-events: none;
+}
+
+.disney-slide-1 { animation-delay: 0s; }
+.disney-slide-2 { animation-delay: 5s; }
+.disney-slide-3 { animation-delay: 10s; }
+.disney-slide-4 { animation-delay: 15s; }
+.disney-slide-5 { animation-delay: 20s; }
+.disney-slide-6 { animation-delay: 25s; }
+
+/* 30s cycle, each slide active for 5s = 16.67% of cycle.
+   1s fade-in (3.33%), 3s hold + slow Ken Burns zoom, 1s fade-out. */
+@keyframes disney-carousel-fade {
+  0%      { opacity: 0; transform: scale(1.0); }
+  3.33%   { opacity: 1; transform: scale(1.02); }
+  13.33%  { opacity: 1; transform: scale(1.06); }
+  16.67%  { opacity: 0; transform: scale(1.08); }
+  100%    { opacity: 0; transform: scale(1.0); }
+}
+
+.disney-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 30, 58, 0.55) 0%,
+    rgba(15, 30, 58, 0.30) 35%,
+    rgba(15, 30, 58, 0.30) 65%,
+    rgba(15, 30, 58, 0.65) 100%
+  );
+}
+
+.disney-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  max-width: 920px;
+}
+
+.disney-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+  line-height: 1.15;
+}
+
+.disney-hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 1.75rem;
+  opacity: 0.85;
+}
+
+.disney-hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.92);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .disney-hero { min-height: 62vh; }
+  .disney-hero-title { font-size: 2.2rem; }
+  .disney-hero-subtitle { font-size: 0.95rem; }
+  .disney-hero-content { padding: 5rem 1.25rem 3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .disney-slide {
+    animation: none;
+    opacity: 0;
+  }
+  .disney-slide-1 {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+/* ===========================
    BUTTONS
    =========================== */
 .btn {
