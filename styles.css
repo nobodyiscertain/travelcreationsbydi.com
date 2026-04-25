@@ -413,6 +413,33 @@ nav {
 }
 
 /* ===========================
+   DISNEY — feature image break
+   =========================== */
+.disney-feature-image {
+  padding: 5rem 2rem;
+  background: var(--white);
+}
+
+.disney-feature-figure {
+  max-width: 1080px;
+  margin: 0 auto;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 18px 48px rgba(44, 51, 56, 0.14);
+  position: relative;
+}
+
+.disney-feature-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .disney-feature-image { padding: 3rem 1rem; }
+}
+
+/* ===========================
    DISNEY — 6-slide carousel hero
    =========================== */
 .disney-hero {
