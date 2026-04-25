@@ -447,7 +447,7 @@ nav {
 .disney-slide-1 { animation-delay: 0s; }
 .disney-slide-2 { animation-delay: 5s; }
 .disney-slide-3 { animation-delay: 10s; }
-.disney-slide-4 { animation-delay: 15s; }
+.disney-slide-4 { animation-delay: 15s; object-position: center 22%; }
 .disney-slide-5 { animation-delay: 20s; }
 .disney-slide-6 { animation-delay: 25s; }
 
