@@ -740,81 +740,91 @@ section { padding: 6rem 2rem; }
   gap: 1.5rem;
 }
 
+/* Center an orphan last card when the row count is odd */
+.dest-grid > .dest-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 0.75rem);
+  justify-self: center;
+}
+
 .dest-card {
-  position: relative;
-  overflow: hidden;
-  height: 320px;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: 0 2px 18px rgba(44,51,56,0.08);
   cursor: pointer;
-  transition: transform 0.4s;
+  transition: transform 0.3s, box-shadow 0.3s;
   text-decoration: none;
+  overflow: hidden;
 }
 
-.dest-card:hover { transform: scale(1.01); }
-
-.dest-card-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+.dest-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(44,51,56,0.12);
 }
 
-.dest-card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent 0%, rgba(44,51,56,0.85) 100%);
-  padding: 3rem 2rem 2rem;
-  color: white;
+.dest-photo {
+  display: block;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
 }
 
-.dest-card-overlay h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.02em;
+.dest-photo.dest-disney      { background-image: url('./images/nanna-wagabond-boys-castle.jpg'); }
+.dest-photo.dest-ocean       { background-image: url('https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80'); }
+.dest-photo.dest-river       { background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'); }
+.dest-photo.dest-sipsail     { background-image: url('./images/sip-sail-group.jpg'); }
+.dest-photo.dest-hillcountry { background-image: url('./images/hill-country-fb-cover.jpg'); }
+.dest-photo.dest-tropical    { background-image: url('./images/hawaii-sunset.jpg'); }
+
+.dest-card-body {
+  padding: 1.75rem 1.75rem 2rem;
+  color: var(--charcoal);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.dest-card-overlay p {
-  font-size: 0.8rem;
-  opacity: 0.8;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.dest-disney, .dest-ocean, .dest-river, .dest-sipsail, .dest-hillcountry, .dest-tropical { background-size: cover; background-position: center; }
-.dest-disney { background-image: url('./images/nanna-wagabond-boys-castle.jpg'); }
-.dest-ocean { background-image: url('https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80'); }
-.dest-river { background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'); }
-.dest-sipsail { background-image: url('./images/sip-sail-group.jpg'); }
-.dest-hillcountry { background-image: url('./images/hill-country-fb-cover.jpg'); }
-.dest-tropical { background-image: url('./images/hawaii-sunset.jpg'); }
-
-.dest-card-overlay .dest-hook {
+.dest-card-body .dest-hook {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  opacity: 0.7;
-  margin-bottom: 0.35rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
-.dest-card-overlay .dest-cta {
+.dest-card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+}
+
+.dest-card-body p {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  opacity: 0.78;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.dest-card-body .dest-cta {
   display: inline-block;
-  margin-top: 0.75rem;
+  margin-top: auto;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--gold-light);
+  color: var(--gold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: color 0.3s;
 }
 
 .dest-card:hover .dest-cta {
-  color: var(--white);
+  color: var(--gold-dark);
 }
 
 /* ===========================
@@ -2144,7 +2154,7 @@ footer a {
   }
 
   .about-image { height: 280px; }
-  .dest-card { height: 220px; }
+  .dest-photo { height: 200px; }
   .review-card h3 { font-size: 1rem; }
 
   footer .footer-links {
@@ -2202,5 +2212,5 @@ footer a {
   .cta-section h2 { font-size: 1.6rem; }
   .photo-grid { grid-template-columns: 1fr; }
   section { padding: 4rem 1.25rem; }
-  .dest-card { height: 200px; }
+  .dest-photo { height: 180px; }
 }
