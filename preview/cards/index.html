@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Card Variants Preview | Travel Creations By Di</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Pinyon+Script&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    /* Preview-only chrome */
+    .preview-banner {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+    .preview-banner strong { color: var(--gold-light); letter-spacing: 0.15em; }
+    .variant-label {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 1.5rem 1.5rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+    .variant-label .vlabel-tag {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+    .variant-label h2 { font-size: 1.6rem; font-weight: 500; margin-bottom: 0.25rem; }
+    .variant-label p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      max-width: 640px;
+      margin: 0.5rem auto 0;
+    }
+
+    /* ============================================
+       VARIANT A: Title + subtitle + link, no description, with text pop
+       ============================================ */
+    .vA .dest-card-overlay {
+      background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.92) 100%);
+      padding: 4rem 2rem 2rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.7), 0 2px 24px rgba(0,0,0,0.4);
+    }
+    .vA .dest-card-overlay h3 { font-size: 1.7rem; }
+    .vA .dest-card-overlay .dest-desc { display: none; }
+    .vA .dest-card-overlay .dest-hook { opacity: 0.95; color: var(--gold-light); }
+    .vA .dest-card-overlay .dest-cta { color: var(--gold-light); }
+
+    /* ============================================
+       VARIANT B: Photo on top, all text below in a card
+       ============================================ */
+    .vB .dest-card {
+      height: auto;
+      background: var(--white);
+      box-shadow: 0 2px 18px rgba(44,51,56,0.08);
+    }
+    .vB .dest-card:hover { transform: translateY(-3px); }
+    .vB .dest-photo {
+      display: block;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+    }
+    .vB .dest-disney   { background-image: none; }
+    .vB .dest-ocean    { background-image: none; }
+    .vB .dest-sipsail  { background-image: none; }
+    .vB .dest-hillcountry { background-image: none; }
+    .vB .dest-card-overlay {
+      position: static;
+      background: var(--white);
+      color: var(--charcoal);
+      padding: 1.75rem 1.75rem 2rem;
+      text-shadow: none;
+    }
+    .vB .dest-card-overlay .dest-hook {
+      color: var(--gold);
+      opacity: 1;
+    }
+    .vB .dest-card-overlay h3 {
+      color: var(--charcoal);
+      font-size: 1.5rem;
+    }
+    .vB .dest-card-overlay p {
+      color: var(--charcoal);
+      opacity: 0.75;
+      font-size: 0.9rem;
+    }
+    .vB .dest-card-overlay .dest-cta {
+      color: var(--gold);
+    }
+    .vB .dest-card:hover .dest-cta { color: var(--charcoal); }
+
+    /* ============================================
+       VARIANT C: Frosted glass band — Prismo's pick
+       ============================================ */
+    .vC .dest-card-overlay {
+      background: rgba(44,51,56,0.55);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      padding: 1.5rem 1.75rem 1.75rem;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+    .vC .dest-card-overlay h3 {
+      font-size: 1.55rem;
+      font-weight: 500;
+    }
+    .vC .dest-card-overlay .dest-desc { display: none; }
+    .vC .dest-card-overlay .dest-hook { opacity: 0.95; color: var(--gold-light); }
+    .vC .dest-card-overlay .dest-cta { color: var(--gold-light); margin-top: 0.5rem; }
+
+    /* Variant section spacing */
+    .preview-variant {
+      padding: 0;
+    }
+    .preview-variant .destinations-section { padding-top: 3rem; padding-bottom: 4rem; }
+  </style>
+</head>
+<body>
+
+<div class="preview-banner">
+  <strong>PREVIEW</strong> — three card layouts to compare. The current homepage uses something close to Variant A's photo backgrounds but with weaker contrast.
+</div>
+
+<!-- VARIANT A -->
+<div class="preview-variant vA">
+  <div class="variant-label">
+    <span class="vlabel-tag">Variant A</span>
+    <h2>Title + Subtitle + Link, No Description</h2>
+    <p>Photo background, heavier dark gradient, soft text-shadow. Description copy removed so the eye lands on the title.</p>
+  </div>
+  <section class="destinations-section">
+    <div class="container">
+      <div class="dest-grid">
+        <a href="#" class="dest-card dest-disney">
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Heritage Collection</div>
+            <h3>Disney &amp; Family Magic</h3>
+            <p class="dest-desc">Experience the magic of Disney through a lens of ease and artistry. From the grand adventure of Walt Disney World to the high seas with Disney Cruise Line, we design multi-generational legacies.</p>
+            <span class="dest-cta">Explore the Magic &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="dest-card dest-hillcountry">
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Hill Country Insider</div>
+            <h3>Hand-Selected Local Escapes</h3>
+            <p class="dest-desc">Discover the hidden heart of Texas. From boutique accommodations to private vineyard access, we provide the local stewardship you need.</p>
+            <span class="dest-cta">Discover the Hill Country &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="dest-card dest-sipsail">
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Sip &amp; Sail Social Club</div>
+            <h3>Signature Group Voyages</h3>
+            <p class="dest-desc">Join Diane &amp; Karen for sophisticated community journeys.</p>
+            <span class="dest-cta">Join the Club &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- VARIANT B -->
+<div class="preview-variant vB">
+  <div class="variant-label">
+    <span class="vlabel-tag">Variant B</span>
+    <h2>Photo Above, Text Below</h2>
+    <p>Photo and text live in their own zones. Maximum readability, no contrast risk, slightly more vertical space per card.</p>
+  </div>
+  <section class="destinations-section">
+    <div class="container">
+      <div class="dest-grid">
+        <a href="#" class="dest-card">
+          <span class="dest-photo dest-disney" style="background-image: url('../../images/nanna-wagabond-boys-castle.jpg');"></span>
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Heritage Collection</div>
+            <h3>Disney &amp; Family Magic</h3>
+            <p>Experience the magic of Disney through a lens of ease and artistry. From the grand adventure of Walt Disney World to the high seas with Disney Cruise Line, we design multi-generational legacies.</p>
+            <span class="dest-cta">Explore the Magic &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="dest-card">
+          <span class="dest-photo dest-hillcountry" style="background-image: url('../../images/hill-country-fb-cover.jpg');"></span>
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Hill Country Insider</div>
+            <h3>Hand-Selected Local Escapes</h3>
+            <p>Discover the hidden heart of Texas. From boutique accommodations to private vineyard access, we provide the local stewardship you need.</p>
+            <span class="dest-cta">Discover the Hill Country &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="dest-card">
+          <span class="dest-photo dest-sipsail" style="background-image: url('../../images/sip-sail-group.jpg');"></span>
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Sip &amp; Sail Social Club</div>
+            <h3>Signature Group Voyages</h3>
+            <p>Join Diane &amp; Karen for sophisticated community journeys. Curated gatherings where fine wine, great conversation, and global exploration meet.</p>
+            <span class="dest-cta">Join the Club &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- VARIANT C -->
+<div class="preview-variant vC">
+  <div class="variant-label">
+    <span class="vlabel-tag">Variant C — Prismo's pick</span>
+    <h2>Frosted Glass Band</h2>
+    <p>Photo full-bleed, text sits on a translucent frosted-glass band. Modern luxury feel — title and link stay crisp regardless of the photo behind them.</p>
+  </div>
+  <section class="destinations-section">
+    <div class="container">
+      <div class="dest-grid">
+        <a href="#" class="dest-card dest-disney">
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Heritage Collection</div>
+            <h3>Disney &amp; Family Magic</h3>
+            <span class="dest-cta">Explore the Magic &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="dest-card dest-hillcountry">
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Hill Country Insider</div>
+            <h3>Hand-Selected Local Escapes</h3>
+            <span class="dest-cta">Discover the Hill Country &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="dest-card dest-sipsail">
+          <div class="dest-card-overlay">
+            <div class="dest-hook">The Sip &amp; Sail Social Club</div>
+            <h3>Signature Group Voyages</h3>
+            <span class="dest-cta">Join the Club &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="preview-banner">
+  Reply with which variant you prefer (A, B, or C) and I'll wire it into the live homepage.
+</div>
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="SHUSGKUF" defer></script>
+<!-- / Fathom -->
+</body>
+</html>

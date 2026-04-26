@@ -33,7 +33,6 @@ The /gallery page showcases each property in the Signature Collection with a ded
 - The Onera Collection — boutique architectural nature stays
 - Hoffman Haus — historic Fredericksburg charm, upscale B&B
 - Walnut Canyon Cabins — Hill Country seclusion, panoramic views
-- Whitetail Court Hotel — restored motor court, boutique sophistication
 
 ## Contact
 - Email: diane@travelcreationsbydi.com

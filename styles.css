@@ -2084,8 +2084,8 @@ footer a {
   .offer-grid { grid-template-columns: 1fr; }
 }
 
-/* --- Mobile --- */
-@media (max-width: 768px) {
+/* --- Tablet & Mobile: hamburger nav --- */
+@media (max-width: 1024px) {
   nav { padding: 0 1.5rem; }
 
   .nav-toggle-label { display: flex; }
@@ -2117,13 +2117,17 @@ footer a {
   .nav-links .nav-cta {
     display: inline-block;
     margin-top: 0.75rem;
+    padding: 0.75rem 1.5rem;
     text-align: center;
   }
 
   .nav-toggle:checked ~ .nav-links {
     display: flex;
   }
+}
 
+/* --- Mobile --- */
+@media (max-width: 768px) {
   .nav-logo img { height: 42px; }
   .hero-logo { max-width: 260px; }
   footer .footer-logo img { height: 60px; }
