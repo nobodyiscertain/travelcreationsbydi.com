@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static website for Travel Creations by Di — a Texas Hill Country travel agency run by Diane Mack. Hosted on GitHub Pages at `nobodyiscertain.github.io/travelcreationsbydi.com`.
+Static website for Travel Creations by Di — a Texas Hill Country travel agency run by Diane Mack. Hosted on GitHub Pages, served at `https://travelcreationsbydi.com` via custom domain (CNAME file in repo root, DNS at Bluehost). Pages with custom domain redirect from `nobodyiscertain.github.io/travelcreationsbydi.com`.
 
 ## Tech Stack
 
@@ -13,10 +13,27 @@ Static website for Travel Creations by Di — a Texas Hill Country travel agency
 - Google Fonts: Playfair Display (headings) + Pinyon Script (script accents) + Montserrat (body text)
 - Forms submit via [FormSubmit.co](https://formsubmit.co) to `diane@travelcreationsbydi.com`
 - Mobile hamburger menu uses CSS-only checkbox hack (no JS)
+- Fathom analytics (site code `SHUSGKUF`) loaded via `<script>` before `</head>` on every page
 
 ## Git Workflow
 
-Committing directly to `main` is fine for this repo.
+Committing directly to `main` is fine for this repo. GitHub Pages rebuilds in ~30s after push.
+
+## Quality Gates — EVERY Push (Non-Negotiable)
+
+Before pushing any HTML/CSS changes, ALWAYS verify:
+
+1. **SEO meta tags** on every page touched: `<title>`, `<meta name="description">`, `<meta property="og:title">`, `og:description`, `og:image`, `og:url`, `og:type`, `<meta name="twitter:card">`, `<link rel="canonical">`. Match content changes to meta updates — don't leave stale descriptions.
+2. **sitemap.xml** — update when pages are added/removed/renamed. File lives at repo root. Currently lists home, about, disney, sip-and-sail, hill-country, blog + posts, gallery, contact. Hidden pages (cruising, reviews, /preview/*) are intentionally excluded.
+3. **JSON-LD structured data** — refresh on content changes that affect schema (TravelAgency, FAQPage, BlogPosting, LocalBusiness, Reviews).
+4. **Canonical URLs** — present on every page, pointing to the production https://travelcreationsbydi.com/<path> form.
+5. **Heading hierarchy** — h1 → h2 → h3 with no skipped levels.
+6. **Semantic HTML** — `<main>`, `<nav>`, `<footer>`, descriptive `alt` text on images, descriptive link text.
+7. **Mobile responsive** — grids must stack cleanly, no horizontal scroll, touch targets adequate. Avoid inline grid styles. Test at 1024px (tablet) and 768px (phone) breakpoints.
+8. **`llms.txt`** — sync when services, offerings, properties, or featured collections change.
+9. **Hidden pages** — pages we don't want public yet need `<meta name="robots" content="noindex,nofollow">` and exclusion from sitemap.xml AND no internal links from visible pages. Currently noindex'd: `cruising/`, `reviews/`, `preview/cards/`.
+
+This Quality Gates list was established 2026-03-15 after a sweep found every page missing og:image, canonical URLs, structured data, and several grids broken on mobile.
 
 ## Development
 
@@ -46,7 +63,9 @@ All pages follow the design established in `index.html`. CSS variables defined i
 - **Shared nav/footer**: Every page duplicates the same `<nav>` and `<footer>` markup from `index.html`. When updating nav links or footer, update all HTML files.
 - **Page hero**: Inner pages use `.page-hero` class (not `.hero` which is homepage-only full-viewport).
 - **Active nav**: Add `.active` class to the current page's nav link.
-- **styles.css organization**: Sections are grouped by page/component with comment headers. Page-specific styles (About, Disney, Cruising, Universal, Blog, Gallery, Contact, Thank You) follow shared/global styles. Responsive overrides are at the bottom in a single `@media (max-width: 768px)` block.
+- **styles.css organization**: Sections are grouped by page/component with comment headers. Page-specific styles (About, Disney, Cruising, Universal, Blog, Gallery, Contact, Thank You) follow shared/global styles. Responsive overrides are at the bottom in tiered media query blocks: `@media (max-width: 1024px)` for tablet+nav (hamburger triggers here), `@media (max-width: 900px)` for pillar/offer mid-tablet, `@media (max-width: 768px)` for phone, `@media (max-width: 480px)` for small phones.
+- **Hidden pages**: `cruising/` and `reviews/` are temporarily off the menu but kept in the repo for later relink — do not delete, do not link from visible pages. `preview/cards/` is a sandbox for design variants under review by Diane and Jamie.
+- **Whitetail Court Hotel**: deal hadn't closed as of 2026-04-26; markup was physically removed from gallery and hill-country pages and from llms.txt. Restore from git history (commit `da8546a^`) when the deal closes.
 
 ## Content Reference
 
