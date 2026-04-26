@@ -740,39 +740,18 @@ section { padding: 6rem 2rem; }
   gap: 1.5rem;
 }
 
-/* === Universal orphan card centering ===
-   Applied to every multi-column card grid on the site. Centers an orphan
-   in a 2-col layout (lone last item) and a 3-col layout (1 orphan). For
-   3-col layouts with 2 orphans (e.g. 5 items in 3 cols), use flex with
-   justify-content: center on the grid container directly — see .sig-grid. */
-.dest-grid > :last-child:nth-child(odd),
-.reviews-grid > :last-child:nth-child(odd),
-.collection-grid > :last-child:nth-child(odd),
-.action-cards > :last-child:nth-child(odd),
-.pillar-grid > :last-child:nth-child(odd),
-.inventory-grid > :last-child:nth-child(odd),
-.offer-grid > :last-child:nth-child(odd),
-.blog-grid > :last-child:nth-child(odd),
-.stories-grid > :last-child:nth-child(odd),
-.dining-grid > :last-child:nth-child(odd),
-.promo-grid > :last-child:nth-child(odd) {
+/* === Orphan card centering ===
+   Only for grids that are uniformly 2-col across breakpoints. Applying
+   `:nth-child(odd)` and `:nth-child(3n-2)` rules globally was too
+   aggressive — it incorrectly fired on 4-col grids like .pillar-grid and
+   2-col grids like .blog-grid, shifting cards that didn't need shifting.
+   For non-uniform grids, the orphan rule belongs inside the matching
+   media query. .sig-grid uses flex+justify-content: center, which
+   handles any orphan count cleanly. */
+.dest-grid > :last-child:nth-child(odd) {
   grid-column: 1 / -1;
   max-width: calc(50% - 0.75rem);
   justify-self: center;
-}
-
-/* 3-col layouts: 1 orphan in the last row → place in middle column */
-.reviews-grid > :last-child:nth-child(3n-2),
-.collection-grid > :last-child:nth-child(3n-2),
-.action-cards > :last-child:nth-child(3n-2),
-.inventory-grid > :last-child:nth-child(3n-2),
-.offer-grid > :last-child:nth-child(3n-2),
-.stories-grid > :last-child:nth-child(3n-2),
-.dining-grid > :last-child:nth-child(3n-2),
-.promo-grid > :last-child:nth-child(3n-2),
-.pillar-grid > :last-child:nth-child(3n-2) {
-  grid-column: 2 / 3;
-  justify-self: stretch;
 }
 
 .dest-card {
