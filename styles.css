@@ -849,6 +849,13 @@ section { padding: 6rem 2rem; }
   min-width: 280px;
 }
 
+/* Explicit 2-col variant — used where the section is a 2x2 layout
+   (e.g. Sip & Sail "2026 & 2027 Collections"). Apply both classes:
+   <div class="sig-grid sig-grid-2col"> */
+.sig-grid.sig-grid-2col > .sig-card {
+  flex: 0 1 calc(50% - 0.75rem);
+}
+
 .sig-card {
   background: var(--white);
   overflow: hidden;
