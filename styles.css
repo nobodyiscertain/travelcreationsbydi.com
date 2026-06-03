@@ -2086,6 +2086,22 @@ footer a {
   border: 1px solid var(--border);
 }
 
+/* CTA process steps (1-2-3) — used on the 2027 Group Sailings page.
+   Reuses .why-grid / .why-card; the numeral replaces the SVG card-icon. */
+.cta-content .why-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cta-content .why-card .card-icon .step-numeral {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--gold);
+}
+
 /* ===========================
    RESPONSIVE
    =========================== */
