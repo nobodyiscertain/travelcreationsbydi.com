@@ -727,6 +727,20 @@ section { padding: 6rem 2rem; }
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* 4-up variant (About > Why Work With Diane) — centered icon + text */
+.why-grid-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.why-grid-4col .why-card {
+  text-align: center;
+}
+
+.why-grid-4col .why-card .card-icon {
+  display: flex;
+  justify-content: center;
+}
+
 /* ===========================
    DESTINATIONS
    =========================== */
@@ -2215,6 +2229,7 @@ footer a {
 @media (max-width: 1024px) {
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid-2col { grid-template-columns: repeat(2, 1fr); }
+  .why-grid-4col { grid-template-columns: repeat(2, 1fr); }
   .dest-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .collection-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2316,6 +2331,7 @@ footer a {
     gap: 0;
   }
   .why-grid-2col { grid-template-columns: 1fr; }
+  .why-grid-4col { grid-template-columns: 1fr; }
   .why-card {
     border-bottom: 1px solid var(--border);
   }
