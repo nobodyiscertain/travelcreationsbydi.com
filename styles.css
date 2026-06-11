@@ -2358,3 +2358,39 @@ footer a {
   section { padding: 4rem 1.25rem; }
   .dest-photo { height: 180px; }
 }
+
+/* ===========================
+   CENTERED INVENTORY GRID
+   ===========================
+   Modifier for .inventory-grid used on the Ocean Cruises hub. Switches the
+   3-col CSS grid to a flex row that wraps and centers trailing items, so a
+   destination whose card count is not a multiple of 3 (e.g. Alaska = 5 → a
+   row of 3 with 2 centered beneath) does not leave orphans left-justified.
+   Same flex+justify-content:center idiom as .sig-grid. Because this block is
+   declared after the responsive section, its display:flex wins over the
+   earlier grid-template-columns rules, which become inert on a flex box.
+   Collapses to a single centered column on mobile. */
+.inventory-grid-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.inventory-grid-center > .inventory-card {
+  flex: 0 1 calc(33.333% - 1.34rem);
+  min-width: 260px;
+}
+
+@media (max-width: 1024px) {
+  .inventory-grid-center > .inventory-card {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-grid-center > .inventory-card {
+    flex: 0 1 100%;
+    min-width: 0;
+  }
+}
