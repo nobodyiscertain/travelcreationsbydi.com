@@ -2394,3 +2394,64 @@ footer a {
     min-width: 0;
   }
 }
+
+/* ===========================
+   CRUISING HERO — subtle motion
+   Scoped to .hero-animated so other .page-hero-image
+   pages (e.g. sip-and-sail) are untouched.
+   =========================== */
+.page-hero-image.hero-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Full-bleed image layer at the BOTTOM of the stack.
+   Inherits the section's inline background-image. */
+.page-hero-image.hero-animated::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center;
+  will-change: transform, opacity;
+  /* one-shot soft fade-in, then slow continuous Ken Burns drift */
+  animation:
+    heroFadeIn 1.6s ease-out both,
+    heroKenBurns 31s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Lift the dark scrim ABOVE the new image layer. */
+.page-hero-image.hero-animated::before {
+  z-index: 1;
+}
+
+/* Keep heading + copy ON TOP of both. */
+.page-hero-image.hero-animated h1,
+.page-hero-image.hero-animated p {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroKenBurns {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.10); }
+}
+
+/* Accessibility: no drift for reduced-motion users.
+   Keep a static, fully-visible image (quick fade-in only). */
+@media (prefers-reduced-motion: reduce) {
+  .page-hero-image.hero-animated::after {
+    animation: heroFadeIn 0.8s ease-out both;
+    transform: none;
+  }
+}
